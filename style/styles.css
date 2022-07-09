@@ -1,0 +1,135 @@
+/* Loader one */
+#one{
+    text-align: center;
+}
+body{
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#container{
+    background-color: rgb(91, 71, 205);
+    height:50vh;
+    width:50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10%;
+}
+#loader{
+    border: 8px solid rgba(123, 125, 125, 0.74);
+    border-top: 8px solid rgba(255, 255, 255, 0.864);
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    animation:loader 1.2s linear infinite;
+}
+p{
+    color: rgb(251, 249, 247);
+    font-size: 20px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+#fir{
+    font-size: 20px;
+    animation: pop1 1.2s ease infinite;
+}
+@keyframes loader{
+    0%{
+        transform: none;
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes pop1 {
+    0%{
+        transform: none;
+        color: rgb(209, 159, 85);
+    }
+    50%{
+        text-shadow:20px rgb(165, 222, 9);
+        color:forestgreen;
+    }
+    100%{
+        color:rgb(248, 245, 241);
+    }
+}
+
+
+/* Loader Two */
+#container2{
+    height: 80vh;
+    width: 50vh;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(35, 59, 214, 0.744);
+    border-radius: 10%;
+}
+#shadow{
+    height:35px;
+    width: 65px;
+    border-radius: 50%;
+    animation: pop 1.5s linear infinite;
+    opacity:0.8;
+    background-color:rgba(168, 163, 163, 0.9);
+}
+#box{
+    height:60px;
+    width: 60px;
+    border-radius: 50%;
+    animation: bounce 1.5s linear infinite;
+    background-image: linear-gradient(to right,rgb(255, 247, 0) 50%, rgb(231, 108, 20) 50%);
+}
+p{
+    letter-spacing: 2px;
+}
+p span{
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+@keyframes pop {
+    0%{
+        transform:scale(1);
+        border: 0.8px solid rgb(82, 81, 81);
+    }    
+    50%{
+        transform: scale(0.5);
+        opacity:0.3;
+    }
+    100%{
+        transform: scale(1);
+        opacity:0.5;
+    }
+}
+@keyframes bounce {
+    0%{
+        transform:translateY(0px) rotate(0deg);
+    }    
+    50%{
+        transform: translateY(-200px) rotate(180deg);
+    }
+    100%{
+        transform: translateY(0px) rotate(360deg);
+    }
+}
+span{
+    opacity:0.9;
+    animation:animate 1.5s ease-out infinite;
+}
+@keyframes animate {
+    0%{
+        opacity:1;
+    }    
+    50%{
+        opacity:0.2;
+    }
+    100%{
+        opacity:1;
+    }
+}
